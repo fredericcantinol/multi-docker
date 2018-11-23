@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run dreamaboutme/react-test npm test -- --coverage
 
-after_succes:
+after_success:
   - docker build -t dreamaboutme/multi-client ./client
   - docker build -t dreamaboutme/multi-nginx ./nginx
   - docker build -t dreamaboutme/multi-server ./server
